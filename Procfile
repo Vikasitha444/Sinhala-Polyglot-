@@ -1,1 +1,1 @@
-worker: python3 Sin Poly v1.py
+worker: python3 Sin_Poly_v1.py
