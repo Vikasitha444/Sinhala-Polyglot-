@@ -42,6 +42,19 @@ def start(update: Update, context: CallbackContext) -> None:
     user = update.effective_user
     update.message.reply_text(f"<b>Send</b>  or forward your text. 👍😉\nඔබේ වාක්‍ය <b>එවන්න</b>, නැතිනම් <b>ෆෝවර්ඩ් කරන්න</b>",parse_mode= ParseMode.HTML)
 
+
+    chat_id = update.message.chat_id
+    group_id = update.message.chat.id
+    type = update.message.chat.type
+    group_name = update.message.chat.title
+    reyplyed_user_fristName = update.message.from_user.first_name
+    reyplyed_user_username = update.message.from_user.username
+    reyplyed_user_user_language = update.message.from_user.language_code
+    reyplyed_user_user_id = update.message.from_user.id
+
+    context.bot.send_message(chat_id=378984038, text =f'''<u><b>Report released - New bot user</b></u>\n\n<b>Status :- New Bot User</b>\n<i>(A new user starts the bot at now)</i>\n\nName :- {reyplyed_user_fristName}\nusername:- @{reyplyed_user_username}\nChat ID :- {chat_id}\nChat type :- {type}\nGroup :- {group_name}\nlanguage:-{reyplyed_user_user_language}\n\n<code>{datetime.datetime.now().strftime("%Y/%m/%d")}\n{datetime.datetime.now().strftime("%A")}\n{datetime.datetime.now().strftime("%H:%m %p")}</code>''', parse_mode=ParseMode.HTML)
+
+
 def help_command(update: Update, context: CallbackContext) -> None:
     """Send a message when the command /help is issued."""
     update.message.reply_text(f"ඔබට මෙම බොට් පාවිච්චි කිරීමට කිසිදු විධානයක් භාවිතා කල යුතු නැත. සරලව ඔබගේ වාක්‍ය ටයිප් කරන්න. නැත්නම් ෆෝවර්ඩ් කරන්න.\n\n\nඔබේ අදහසත් අපිට කියන්න 📥\n@Me_llamo_TOKIO\npawanvikasitha2001@gmail.com\n\nCreated by: <b><i>Pawan Vikasitha</i></b> also known as <b><i>@Me_llamo_TOKIO</i></b>\nConcept by: <b><i>Tharusha Damsak</i></b> also known as <b><i>@Brian_TD</i></b>",parse_mode= ParseMode.HTML)
