@@ -5,7 +5,7 @@
 #pip install googletrans==3.1.0a0
 
 import logging
-
+import datetime
 from telegram import Update, ForceReply
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
@@ -16,7 +16,7 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import CallbackQueryHandler
 from telegram import Update, ForceReply
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
-import datetime
+
 from googletrans import Translator
 # Enable logging
 
